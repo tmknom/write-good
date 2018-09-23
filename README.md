@@ -7,7 +7,9 @@
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/tmknom/write-good.svg)](https://microbadger.com/images/tmknom/write-good)
 [![License](https://img.shields.io/github/license/tmknom/write-good.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Dockerfile template.
+Naive linter for English prose based on Docker.
+
+This is [write-good](https://github.com/btford/write-good) wrapper.
 
 ## Requirements
 
@@ -16,8 +18,7 @@ Dockerfile template.
 ## Usage
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/tmknom/write-good/master/install | sh -s example
-cd example
+docker run --rm -v "$PWD:/work" tmknom/write-good **/*.md
 ```
 
 ## Makefile targets
